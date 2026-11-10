@@ -1,0 +1,18 @@
+.eyebrow { font-size: 11px; color: #476878; font-weight: 700; letter-spacing: 1.6px; line-height: 1.8; }
+h1 { font-size: clamp(32px, 4.3vw, 52px); line-height: 1.13; letter-spacing: -1.8px; margin-bottom: 22px; font-weight: 650; }
+.section-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 12px; margin-bottom: 20px; }
+h2 { font-size: 19px; margin-bottom: 0; }
+.section-heading > span { color: #60717d; font-size: 12px; }
+h3 { font-size: 18px; margin-bottom: 12px; }
+@media (max-width: 760px) {
+  .section-heading { align-items: flex-start; flex-direction: column; }
+}
+
+.access-viewport { height: 100dvh; overflow-y: auto; }
+.access-main { flex: 1; display: grid; align-items: center; }
+.access-main .recovery-wrap { width: 100%; }
+.access-status { display: flex; align-items: center; gap: 16px; }
+.access-status p { margin: 0; color: var(--acaplan-ink); }
+.access-spinner { width: 24px; height: 24px; flex-shrink: 0; border: 3px solid var(--acaplan-line); border-top-color: var(--acaplan-indigo); border-radius: 50%; animation: access-spin 1s linear infinite; }
+@keyframes access-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .access-spinner { animation: none; } }
